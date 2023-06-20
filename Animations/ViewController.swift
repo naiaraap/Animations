@@ -21,10 +21,9 @@ class ViewController: UIViewController {
   
   //MARK - IBActions
   @IBAction func startAnimationButton(_ sender: UIButton) {
-    let newFrame = CGRect(x: 285, y: animatedView.frame.origin.y, width: animatedView.frame.size.width, height: animatedView.frame.size.height)
-    
-    animatedView.frame = newFrame
-    
+    UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+      self.animatedView.frame.origin.x = 285
+    }, completion: nil)
   }
 }
 
